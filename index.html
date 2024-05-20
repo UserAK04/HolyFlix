@@ -390,17 +390,17 @@
     <!-- <iframe src="./assets/Audio/Raghunandana.mp3" allow="autoplay" id="iframeAudio">
     </iframe> -->
 
-    <audio id="autoplay" muted loop>
+    <audio id="autoplay" autoplay muted loop>
         <source src="./assets/Audio/Raghunandana.mp3" type="audio/mp3">
     </audio>
 
 </body>
 
 <script>
-    window.onload() = function(){
-        document.getElementById("autoplay").muted=false;
-        document.getElementById("autoplay").play();
-    };
+    setTimeout(()=>{
+        let audio = document.getElementById("autoplay");
+        audio.muted=false;
+    },1000)
     
     let allQuestions = document.querySelectorAll(".faqQuestion");
     // console.log(allQuestions);
