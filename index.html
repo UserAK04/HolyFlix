@@ -390,7 +390,7 @@
     <!-- <iframe src="./assets/Audio/Raghunandana.mp3" allow="autoplay" id="iframeAudio">
     </iframe> -->
 
-    <audio id="autoplay" unmuted loop>
+    <audio id="autoplay" muted loop>
         <source src="./assets/Audio/Raghunandana.mp3" type="audio/mp3">
     </audio>
 
@@ -398,8 +398,10 @@
 
 <script>
     window.onload() = function(){
+        document.getElementById("autoplay").muted=false;
         document.getElementById("autoplay").play();
-    }
+    };
+    
     let allQuestions = document.querySelectorAll(".faqQuestion");
     // console.log(allQuestions);
     allQuestions.forEach((v, index) => {
